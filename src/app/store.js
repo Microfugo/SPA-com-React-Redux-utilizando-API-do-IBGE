@@ -1,8 +1,8 @@
+import localidadesReducer from "./localidadesSlicer"
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    localidades:localidadesReducer,
   },
 });
