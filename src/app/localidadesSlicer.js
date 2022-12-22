@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+
 export const slice = createSlice({
     name: "localidades",
     initialState: {
@@ -10,10 +12,16 @@ export const slice = createSlice({
     reducers: {
         changeEstados(state, { payload }) {
             return { ...state, estados: payload }
+        },
+        changeMunicipios(state, { payload }) {
+            return { ...state, cidades: payload }
+        },
+        changeMunicipio(state, { payload }) {
+            return { ...state, municipio: payload }
         }
     }
 })
 
-export const { changeEstados } = slice.actions
+export const { changeEstados, changeMunicipios, changeMunicipio} = slice.actions
 export const selectEstados = state => state.localidades
 export default slice.reducer 
