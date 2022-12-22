@@ -24,7 +24,7 @@ export default function Localidades() {
         const buscaMunicipio = `/municipios/${municipioSelecionado}/distritos`
         api.get(buscaMunicipio).then((response) => {
             console.log(response.data)
-            dispatch(changeMunicipio(response.data[0]))
+            dispatch(changeMunicipio(response.data))
         })
     }
 
@@ -41,7 +41,7 @@ export default function Localidades() {
                 <option></option>
                 {estados.map((item) => {
                     return (
-                        <option value={item.id}>{item.sigla}</option>
+                        <option key={item.id} value={item.id}>{item.sigla}</option>
                     )
                 })}
             </select>
@@ -50,15 +50,21 @@ export default function Localidades() {
                 <option></option>
                 {cidades.map((item) => {
                     return (
-                        <option value={item.id}>{item.nome}</option>
+                        <option key={item.id} value={item.id}>{item.nome}</option>
                     )
                 })}
             </select>
             {municipio.map((item) => {
-                    return (
-                        <p>{item.nome}</p>
-                    )
-                })}
+                return (
+                    <div>
+                        <p>nome: {item.nome}</p>
+                        <p>microrregiao:{item.municipio.microrregiao.nome}</p>
+                        <p>mesorregiao:{item.municipio.microrregiao.mesorregiao.nome}</p>
+                        <p>UF:{item.municipio.microrregiao.mesorregiao.UF.nome}</p>
+                        <p>Regiao do municipio:{item.municipio["regiao-imediata"].nome}</p>
+                    </div>
+                )
+            })}
         </div>
     )
 }
