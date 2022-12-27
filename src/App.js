@@ -9,7 +9,9 @@ function App() {
       <header className="App-header">
         <Logo></Logo>
       </header>
-      <div>    <Localidades></Localidades>
+      <div>    
+        <p>Selecione aqui o estado e municipio para pesquisar suas informações</p>
+        <Localidades></Localidades>
       </div>
     </div>
   );
