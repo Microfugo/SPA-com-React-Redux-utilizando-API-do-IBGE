@@ -1,4 +1,4 @@
-import ipam from "../../img/ipam.png"
+import ipam from "../../img/ipam.svg"
 import "./estilo.css"
 
 function Logo() {
