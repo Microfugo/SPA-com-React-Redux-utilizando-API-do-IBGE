@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import api from '../api/api'
 import { changeEstados, selectEstados, changeMunicipios, changeMunicipio } from '../app/localidadesSlicer'
+import "./estilo.css";
 
 export default function Localidades() {
     const dispatch = useDispatch()
@@ -56,13 +57,17 @@ export default function Localidades() {
             </select>
             {municipio.map((item) => {
                 return (
-                    <div>
-                        <p>nome: {item.nome}</p>
-                        <p>microrregiao:{item.municipio.microrregiao.nome}</p>
-                        <p>mesorregiao:{item.municipio.microrregiao.mesorregiao.nome}</p>
-                        <p>UF:{item.municipio.microrregiao.mesorregiao.UF.nome}</p>
-                        <p>Regiao do municipio:{item.municipio["regiao-imediata"].nome}</p>
-                    </div>
+                    <tr className='tabela'>
+                        <td>nome: {item.nome}</td>
+                        <br/>
+                        <td>microrregiao:{item.municipio.microrregiao.nome}</td>
+                        <br/>
+                        <td>mesorregiao:{item.municipio.microrregiao.mesorregiao.nome}</td>
+                        <br/>
+                        <td>UF:{item.municipio.microrregiao.mesorregiao.UF.nome}</td>
+                        <br/>
+                        <td>Regiao do municipio:{item.municipio["regiao-imediata"].nome}</td>
+                    </tr>
                 )
             })}
         </div>
