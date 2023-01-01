@@ -10,7 +10,7 @@ function App() {
         <Logo></Logo>
       </header>
       <div>    
-        <p>Selecione aqui o estado e municipio para pesquisar suas informações</p>
+        <p>Selecione o estado e município para pesquisar suas divisões político-administrativas.</p>
         <Localidades></Localidades>
       </div>
     </div>
