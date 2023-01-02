@@ -1,9 +1,10 @@
 .tabela{
     border: 5px solid rgb(9, 9, 9);
-    display: block;
+    display: grid;
     width: 100%;
     text-decoration: none;
     color: black;
+    padding: 1%;
 }
 
 
