@@ -8,6 +8,10 @@
 }
 
 .App-header {
-  background-color: #3d915c ;
+  background-color: #48c676 ;
   display: flex;
+}
+
+.localidades{
+  padding: 1%;
 }

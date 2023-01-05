@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Logo></Logo>
       </header>
-      <div>    
+      <div className='localidades'>    
         <p>Selecione o estado e município para pesquisar suas divisões político-administrativas.</p>
         <Localidades></Localidades>
       </div>

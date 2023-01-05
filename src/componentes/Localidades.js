@@ -22,7 +22,7 @@ export default function Localidades() {
         })
     }
     function escolheMunicipio(municipioSelecionado) {
-        const buscaMunicipio = `/municipios/${municipioSelecionado}/distritos`
+        const buscaMunicipio = `/municipios/${municipioSelecionado}/distritos/`
         api.get(buscaMunicipio).then((response) => {
             console.log(response.data)
             dispatch(changeMunicipio(response.data))
@@ -30,7 +30,7 @@ export default function Localidades() {
     }
 
     useEffect(() => {
-        api.get("/estados").then((response) => {
+        api.get("/estados?orderBy=nome").then((response) => {
             dispatch(changeEstados(response.data))
             console.log(response.data)
         })
