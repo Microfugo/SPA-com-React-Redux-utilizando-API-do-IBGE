@@ -35,7 +35,7 @@ export default function Localidades() {
             console.log(response.data)
         })
         console.log(estado)
-    }, [estado])
+    }, [dispatch, estado])
     return (
         <div>
             <select onChange={(e) => { escolheEstado(e.target.value) }}>
